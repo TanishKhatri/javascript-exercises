@@ -21,21 +21,15 @@ const sumAll = function(int1, int2) {
   sortIntegers.sort((a,b) => a-b);
   startInt = sortIntegers[0];
   endInt = sortIntegers[1];
-
-  console.log();
   //Error Checking
   if(!((Number.isSafeInteger(startInt)) && (startInt >= 0) && (Number.isSafeInteger(endInt)) && (endInt >= 0))) {
     return "ERROR";
   }
 
-  // The Sum and Return
-  let sumArray = [];
-  for(let i = startInt; i <= endInt; i++){
-    sumArray.push(i);
-  }
   let total = 0;
-  for(const integer of sumArray){
-    total += integer;
+  // The Sum and Return
+  for(let i = startInt; i <= endInt; i++){
+    total += i;
   }
   return total;
 };
